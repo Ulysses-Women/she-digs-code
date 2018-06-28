@@ -11,27 +11,27 @@ public class Profile {
     private long id;
 
     @Column(nullable = false)
-    private String first_name;
+    private String firstName;
 
     @Column(nullable = false)
-    private String last_name;
+    private String lastName;
 
     @Column(nullable = false, columnDefinition = "DATE")
-    private Date birth_date;
+    private Date birthDate;
 
     @Column(nullable = true, columnDefinition = "DATE")
-    private Date death_date;
+    private Date deathDate;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String biography;
 
     public Profile(){};
 
-    public Profile(String first_name, String last_name, Date birth_date, Date death_date, String biography) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.birth_date = birth_date;
-        this.death_date = death_date;
+    public Profile(String firstName, String lastName, Date birthDate, Date deathDate, String biography) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.deathDate = deathDate;
         this.biography = biography;
     }
 }

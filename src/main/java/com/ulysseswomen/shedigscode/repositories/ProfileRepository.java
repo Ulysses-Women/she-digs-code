@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface ProfileRepository extends CrudRepository<Profile, Long>{
         List<Profile> findAll();
-        Profile save();
 }

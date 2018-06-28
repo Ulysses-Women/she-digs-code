@@ -4,26 +4,26 @@
 <div th:replace="fragments :: navbar"></div>
 <div class="container">
     <h1 class="text-center">Create a new Post</h1>
-    <form th:action="@{/profile/create}" method="POST" th:object="${profile}" id="createProfile">
-        <div class="form-group">
-            <label for="firstName">Title: </label>
-            <input class="form-control" th:field="*{first_name}" id="firstName"/>
-        </div>
+    <form th:action="@{/profiles/create}" method="POST" th:object="${profile}" id="createProfile">
+        <!--<div class="form-group">-->
+            <!--<label for="firstName">Title: </label>-->
+            <!--<input class="form-control" th:field="*{firstName}" id="firstName"/>-->
+        <!--</div>-->
         <div class="form-group">
             <label for="lastName">Description: </label>
-            <textarea class="form-control" th:field="*{last_name}" id="lastName"/>
+            <input class="form-control" th:field="*{lastName}" id="lastName"/>
         </div>
         <div class="form-group">
             <label for="birthDate">Description: </label>
-            <textarea class="form-control" th:field="*{birth_date}" id="birthDate"/>
+            <input class="form-control" th:field="*{birthDate}" id="birthDate"/>
         </div>
         <div class="form-group">
             <label for="deathDate">Description: </label>
-            <textarea class="form-control" th:field="*{death_date}" id="deathDate"/>
+            <input class="form-control" th:field="*{deathDate}" id="deathDate" type="date"/>
         </div>
         <div class="form-group">
             <label for="biography">Description: </label>
-            <textarea class="form-control" th:field="*{biography}" id="biography"/>
+            <input class="form-control" th:field="*{biography}" id="biography" type="date"/>
         </div>
         <input type="submit" class="btn btn-block btn-primary"/>
     </form>
