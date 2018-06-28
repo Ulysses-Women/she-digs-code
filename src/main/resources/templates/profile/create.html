@@ -4,16 +4,26 @@
 <div th:replace="fragments :: navbar"></div>
 <div class="container">
     <h1 class="text-center">Create a new Post</h1>
-    <form th:action="@{/posts/create}" method="POST" th:object="${post}" id="createPost">
+    <form th:action="@{/profile/create}" method="POST" th:object="${profile}" id="createProfile">
         <div class="form-group">
-            <label for="titleInput">Title: </label>
-            <input class="form-control" th:field="*{title}" id="titleInput"/>
-            <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}" />
+            <label for="firstName">Title: </label>
+            <input class="form-control" th:field="*{first_name}" id="firstName"/>
         </div>
         <div class="form-group">
-            <label for="bodyInput">Description: </label>
-            <textarea class="form-control" th:field="*{body}" id="bodyInput"/>
-            <p th:if="${#fields.hasErrors('body')}" th:errors="*{body}" />
+            <label for="lastName">Description: </label>
+            <textarea class="form-control" th:field="*{last_name}" id="lastName"/>
+        </div>
+        <div class="form-group">
+            <label for="birthDate">Description: </label>
+            <textarea class="form-control" th:field="*{birth_date}" id="birthDate"/>
+        </div>
+        <div class="form-group">
+            <label for="deathDate">Description: </label>
+            <textarea class="form-control" th:field="*{death_date}" id="deathDate"/>
+        </div>
+        <div class="form-group">
+            <label for="biography">Description: </label>
+            <textarea class="form-control" th:field="*{biography}" id="biography"/>
         </div>
         <input type="submit" class="btn btn-block btn-primary"/>
     </form>
